@@ -32,6 +32,7 @@ const init = function () {
   player0El.classList.add('player--active');
   player1El.classList.remove('player--active');
 };
+init();
 
 const switchPlayer = function () {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
@@ -72,7 +73,7 @@ btnHold.addEventListener('click', function () {
       score[activePlayer];
 
     //2. check if player's score is >=100
-    if (score[activePlayer] >= 20) {
+    if (score[activePlayer] >= 100) {
       //Finish the game
       playing = false;
       diceEl.classList.add('hidden');
